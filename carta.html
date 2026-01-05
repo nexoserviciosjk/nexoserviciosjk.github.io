@@ -67,11 +67,38 @@ body {
     color: #000;
 }
 
-/* Menú - Configurado para 2+ columnas */
+/* Menú - Ajuste para 2 columnas en vertical */
 .menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Forzar 2 columnas en móviles, más en pantallas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
+}
+
+/* Para pantallas muy pequeñas (opcional pero seguro) */
+@media (max-width: 400px) {
+    .menu {
+        grid-template-columns: 1fr 1fr; /* Fijo 2 columnas */
+    }
+    .item-name {
+        font-size: 0.9em; /* Reducir un poco el texto si es necesario */
+    }
+    .item-price {
+        font-size: 0.9em;
+    }
+}
+
+/* Para pantallas grandes, permitir más columnas */
+@media (min-width: 600px) {
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (min-width: 800px) {
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
 }
 
 .menu-item {
@@ -389,27 +416,5 @@ function volver() {
 function filtrarCategorias(tipo) {
     items.forEach(item => {
         item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
-    });
-}
 
-// Filtrar cuando carga la página
-filtrarCategorias('arroces');
-
-// Filtrar al hacer clic en las categorías
-document.querySelectorAll('.category').forEach(cat => {
-    cat.onclick = () => {
-        document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
-        cat.classList.add('active');
-
-        const tipo = cat.dataset.cat;
-        filtrarCategorias(tipo);
-        // Ocultar preview si está abierto
-        preview.classList.remove('show');
-        menu.style.display = "grid";
-    }
-});
-</script>
-
-</body>
-</html>
-
+        
