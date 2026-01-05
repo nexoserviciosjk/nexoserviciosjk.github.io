@@ -25,17 +25,25 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
+    /* Ajuste: Evitar desbordamiento */
+    overflow-x: hidden;
 }
 .header {
     text-align: center;
     padding: 50px 20px;
     background: #000;
     color: #fff;
+    /* Ajuste: Ancho completo y centrado */
+    width: 100%;
+    box-sizing: border-box;
 }
 .container {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+    /* Ajuste: Asegurar que no se desborde */
+    width: 100%;
+    box-sizing: border-box;
 }
 .categories {
     display: flex;
@@ -43,6 +51,8 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    /* Ajuste: Centrado total */
+    width: 100%;
 }
 .category {
     padding: 10px 18px;
@@ -51,16 +61,23 @@ body {
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    /* Ajuste: Tamaño uniforme */
+    min-width: 80px;
+    text-align: center;
 }
 .category.active {
     background: var(--accent);
     color: #000;
 }
-/* CAMBIO 1: Menú en 2 columnas fijas */
+/* Menú en 2 columnas fijas */
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    /* Ajuste: Centrado y ancho correcto */
+    width: 100%;
+    max-width: 800px; /* Limitar ancho para que no se extienda demasiado */
+    margin: 0 auto; /* Centrar el menú */
 }
 .menu-item {
     background: var(--card);
@@ -72,24 +89,34 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    /* Ajuste: No desbordar texto */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .menu-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 22px rgba(0,0,0,0.28);
 }
 .item-name {
-    white-space: nowrap;
     font-weight: 600;
+    /* Ajuste: Permitir que el nombre ocupe espacio */
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .item-price {
-    white-space: nowrap;
     font-weight: 600;
     color: var(--accent);
+    /* Ajuste: Mantener precio visible */
+    flex-shrink: 0;
 }
 .dots {
     flex: 1;
     border-bottom: 1px dotted rgba(0,0,0,0.25);
     transform: translateY(-2px);
+    /* Ajuste: Alinear puntos correctamente */
+    margin: 0 5px;
 }
 @media (prefers-color-scheme: dark) {
     .dots {
@@ -100,6 +127,10 @@ body {
     margin-top: 40px;
     text-align: center;
     display: none;
+    /* Ajuste: Centrar preview */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .preview.show {
     display: block;
@@ -124,6 +155,8 @@ body {
     background: var(--accent);
     font-weight: 600;
     cursor: pointer;
+    /* Ajuste: Centrar botón */
+    display: inline-block;
 }
 </style>
 </head>
@@ -209,7 +242,7 @@ function volver() {
     menu.style.display = "grid";
 }
 
-// CAMBIO 2: Filtro de categorías completamente funcional
+// Filtro de categorías completamente funcional
 document.querySelectorAll('.category').forEach(categoria => {
     categoria.addEventListener('click', function() {
         // Quitar clase active de todas
