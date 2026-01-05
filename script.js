@@ -93,6 +93,7 @@ for (let section in data) {
 
 /* ===== FUNCIONES ===== */
 function showList(section) {
+  sectionsDiv.classList.remove("hidden"); // Muestra los botones de sección al regresar
   contentDiv.innerHTML = "";
   data[section].forEach(item => {
     const div = document.createElement("div");
@@ -104,6 +105,7 @@ function showList(section) {
 }
 
 function showDetail(item, section) {
+  sectionsDiv.classList.add("hidden"); // Oculta los botones de sección al abrir un plato
   contentDiv.innerHTML = `
     <div class="plato-detalle">
       <h2>${item.nombre}</h2>
