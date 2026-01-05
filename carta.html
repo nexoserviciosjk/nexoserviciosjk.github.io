@@ -41,7 +41,7 @@ body {
 .container {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 20px;
+    padding: 0 15px; /* Reducir padding para más espacio */
 }
 
 /* Categorías */
@@ -60,6 +60,8 @@ body {
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    min-width: 80px;
+    text-align: center;
 }
 
 .category.active {
@@ -67,73 +69,60 @@ body {
     color: #000;
 }
 
-/* Menú - Ajuste para 2 columnas en vertical */
+/* Menú - Ajustes para botones uniformes */
 .menu {
     display: grid;
-    /* Forzar 2 columnas en móviles, más en pantallas grandes */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    /* Fijar columnas: 2 en vertical, 3 en horizontal */
+    grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas en vertical */
+    gap: 10px; /* Reducir espacio entre botones */
 }
 
-/* Para pantallas muy pequeñas (opcional pero seguro) */
-@media (max-width: 400px) {
-    .menu {
-        grid-template-columns: 1fr 1fr; /* Fijo 2 columnas */
-    }
-    .item-name {
-        font-size: 0.9em; /* Reducir un poco el texto si es necesario */
-    }
-    .item-price {
-        font-size: 0.9em;
-    }
-}
-
-/* Para pantallas grandes, permitir más columnas */
+/* Para pantallas horizontales o grandes */
 @media (min-width: 600px) {
     .menu {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media (min-width: 800px) {
-    .menu {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en horizontal */
     }
 }
 
 .menu-item {
     background: var(--card);
-    padding: 16px 20px;
+    padding: 12px 15px; /* Reducir padding interno */
     border-radius: 14px;
     cursor: pointer;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px; /* Reducir espacio entre elementos */
+    min-height: 40px; /* Altura mínima uniforme */
 }
 
 .menu-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 22px rgba(0,0,0,0.28);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .item-name {
-    white-space: nowrap;
     font-weight: 600;
+    font-size: 0.9em; /* Tamaño de texto ajustado */
+    white-space: normal; /* Permitir salto de línea si es necesario */
+    flex: 1; /* Ocupar espacio disponible */
 }
 
 .item-price {
-    white-space: nowrap;
     font-weight: 600;
     color: var(--accent);
+    font-size: 0.9em;
+    white-space: nowrap;
+    flex-shrink: 0; /* No reducir tamaño del precio */
 }
 
 .dots {
-    flex: 1;
+    flex: 0 1 auto; /* No estirar demasiado */
     border-bottom: 1px dotted rgba(0,0,0,0.25);
-    transform: translateY(-2px);
+    margin: 0 5px; /* Espacio pequeño entre nombre y precio */
+    min-width: 10px; /* Mínimo espacio para puntos */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -415,6 +404,5 @@ function volver() {
 /* Filtro categorías */
 function filtrarCategorias(tipo) {
     items.forEach(item => {
-        item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
-
-        
+        item.style.display = (item.dataset.cat === tipo) ? 'flex'
+            
