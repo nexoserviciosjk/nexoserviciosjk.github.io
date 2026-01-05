@@ -161,7 +161,7 @@ body {
 
 <div class="container">
 
-    <!-- Categorías (SIN TODOS) -->
+    <!-- Categorías -->
     <div class="categories">
         <div class="category active" data-cat="arroces">Arroces</div>
         <div class="category" data-cat="sopas">Sopas</div>
@@ -171,6 +171,9 @@ body {
     <!-- Menú -->
     <div class="menu" id="menu">
 
+        <!-- ====================================== -->
+        <!-- CATEGORÍA ARROCES (ORIGINAL + 2 NUEVOS) -->
+        <!-- ====================================== -->
         <div class="menu-item" data-cat="arroces"
              data-img="chaufa.jpg"
              data-name="Arroz Chaufa"
@@ -181,6 +184,32 @@ body {
             <span class="item-price">S/ 18.00</span>
         </div>
 
+        <!-- Plato nuevo 1 de Arroces -->
+        <div class="menu-item" data-cat="arroces"
+             data-img="arroz-pollo.jpg"
+             data-name="Arroz con Pollo"
+             data-price="S/ 20.00"
+             data-desc="Arroz guisado con trozos de pollo y verduras frescas.">
+            <span class="item-name">Arroz con Pollo</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 20.00</span>
+        </div>
+
+        <!-- Plato nuevo 2 de Arroces -->
+        <div class="menu-item" data-cat="arroces"
+             data-img="arroz-mariscos.jpg"
+             data-name="Arroz con Mariscos"
+             data-price="S/ 28.00"
+             data-desc="Arroz salteado con camarones, calamares y mejillones.">
+            <span class="item-name">Arroz con Mariscos</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 28.00</span>
+        </div>
+
+
+        <!-- ====================================== -->
+        <!-- CATEGORÍA COMBOS (ORIGINAL + 2 NUEVOS) -->
+        <!-- ====================================== -->
         <div class="menu-item" data-cat="combos"
              data-img=""
              data-name="Combinado de Pollo"
@@ -191,13 +220,62 @@ body {
             <span class="item-price">S/ 22.00</span>
         </div>
 
+        <!-- Plato nuevo 1 de Combos -->
+        <div class="menu-item" data-cat="combos"
+             data-img="combo-familiar.jpg"
+             data-name="Combo Familiar"
+             data-price="S/ 45.00"
+             data-desc="Chaufa grande + tallarines + 2 bebidas medianas.">
+            <span class="item-name">Combo Familiar</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 45.00</span>
+        </div>
+
+        <!-- Plato nuevo 2 de Combos -->
+        <div class="menu-item" data-cat="combos"
+             data-img="combo-vegano.jpg"
+             data-name="Combo Vegano"
+             data-price="S/ 19.00"
+             data-desc="Arroz vegano + sopa de legumbres + jugo natural.">
+            <span class="item-name">Combo Vegano</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 19.00</span>
+        </div>
+
+
+        <!-- ====================================== -->
+        <!-- CATEGORÍA SOPAS (ORIGINAL + 2 NUEVOS) -->
+        <!-- ====================================== -->
         <div class="menu-item" data-cat="sopas"
+             data-img="sopa-wantan.jpg"
              data-name="Sopa Wantán"
              data-price="S/ 15.00"
              data-desc="Caldo tradicional con wantanes y verduras.">
             <span class="item-name">Sopa Wantán</span>
             <span class="dots"></span>
             <span class="item-price">S/ 15.00</span>
+        </div>
+
+        <!-- Plato nuevo 1 de Sopas -->
+        <div class="menu-item" data-cat="sopas"
+             data-img="sopa-fideos.jpg"
+             data-name="Sopa de Fideos"
+             data-price="S/ 14.00"
+             data-desc="Caldo de pollo con fideos finos y trozos de carne.">
+            <span class="item-name">Sopa de Fideos</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 14.00</span>
+        </div>
+
+        <!-- Plato nuevo 2 de Sopas -->
+        <div class="menu-item" data-cat="sopas"
+             data-img="sopa-tomyam.jpg"
+             data-name="Sopa Tom Yam"
+             data-price="S/ 22.00"
+             data-desc="Sopa tailandesa picante con camarones y cilantro.">
+            <span class="item-name">Sopa Tom Yam</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 22.00</span>
         </div>
 
     </div>
@@ -247,29 +325,19 @@ function volver() {
 }
 
 /* Filtro categorías */
-function filtrarCategorias(tipo) {
-    items.forEach(item => {
-        item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
-    });
-}
-
-// Filtrar cuando carga la página
-filtrarCategorias('arroces');
-
-// Filtrar al hacer clic en las categorías
 document.querySelectorAll('.category').forEach(cat => {
     cat.onclick = () => {
         document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
         cat.classList.add('active');
 
         const tipo = cat.dataset.cat;
-        filtrarCategorias(tipo);
-        // Ocultar preview si está abierto
-        preview.classList.remove('show');
-        menu.style.display = "grid";
+        items.forEach(item => {
+            item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
+        });
     }
 });
 </script>
 
 </body>
 </html>
+
