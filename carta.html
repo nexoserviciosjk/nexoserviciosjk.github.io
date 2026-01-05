@@ -30,29 +30,40 @@ body {
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
+    /* Evitar margen superior indeseado */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
-/* HEADER COMPLETO Y CENTRADO */
+/* HEADER NEGRO A PANTALLA COMPLETA Y CENTRADO */
 .header {
     text-align: center;
     padding: 50px 20px;
     background: #000;
     color: #fff;
-    width: 100%;
-    margin: 0;
+    width: 100vw; /* Ancho total de la ventana */
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 !important;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 .header h1 {
     font-size: 2.5em;
     margin-bottom: 8px;
+    text-align: center;
 }
 .header p {
     font-size: 1.2em;
+    text-align: center;
 }
 .container {
     max-width: 700px;
     margin: 40px auto;
     padding: 0 20px;
+    width: 100%;
 }
-/* CATEGORÍAS CENTRADAS PERFECTAMENTE */
+/* CATEGORÍAS CENTRADAS */
 .categories {
     display: flex;
     gap: 15px;
@@ -75,7 +86,7 @@ body {
     background: var(--accent);
     color: #000;
 }
-/* MENÚ CENTRADO Y CON COLUMNAS AJUSTADAS */
+/* MENÚ CENTRADO */
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -255,3 +266,4 @@ document.querySelectorAll('.category').forEach(categoria => {
 </script>
 </body>
 </html>
+
