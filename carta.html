@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>San Joy Lao - Carta</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --bg: #fdfbfb;
@@ -14,7 +12,6 @@
     --text: #1c1c1e;
     --accent: #1a7f37;
 }
-
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #0f1115;
@@ -23,28 +20,23 @@
         --accent: #4ade80;
     }
 }
-
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     background: var(--bg);
     color: var(--text);
 }
-
 .header {
     text-align: center;
     padding: 50px 20px;
     background: #000;
     color: #fff;
 }
-
 .container {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
-
-/* Categorías */
 .categories {
     display: flex;
     gap: 10px;
@@ -52,7 +44,6 @@ body {
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
-
 .category {
     padding: 10px 18px;
     border-radius: 20px;
@@ -61,19 +52,16 @@ body {
     font-weight: 600;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
-
 .category.active {
     background: var(--accent);
     color: #000;
 }
-
-/* Menú */
+/* CAMBIO 1: Menú en 2 columnas fijas */
 .menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
-
 .menu-item {
     background: var(--card);
     padding: 16px 20px;
@@ -81,65 +69,53 @@ body {
     cursor: pointer;
     box-shadow: 0 6px 14px rgba(0,0,0,0.18);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .menu-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 22px rgba(0,0,0,0.28);
 }
-
 .item-name {
     white-space: nowrap;
     font-weight: 600;
 }
-
 .item-price {
     white-space: nowrap;
     font-weight: 600;
     color: var(--accent);
 }
-
 .dots {
     flex: 1;
     border-bottom: 1px dotted rgba(0,0,0,0.25);
     transform: translateY(-2px);
 }
-
 @media (prefers-color-scheme: dark) {
     .dots {
         border-bottom: 1px dotted rgba(255,255,255,0.25);
     }
 }
-
-/* Preview */
 .preview {
     margin-top: 40px;
     text-align: center;
     display: none;
 }
-
 .preview.show {
     display: block;
 }
-
 .preview img {
     max-width: 100%;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.4);
     margin-bottom: 15px;
 }
-
 .price {
     font-size: 1.2em;
     font-weight: 600;
     color: var(--accent);
     margin-top: 10px;
 }
-
 .back-btn {
     margin-top: 25px;
     padding: 12px 22px;
@@ -151,136 +127,52 @@ body {
 }
 </style>
 </head>
-
 <body>
-
 <div class="header">
     <h1>San Joy Lao</h1>
     <p>Carta Digital</p>
 </div>
-
 <div class="container">
-
-    <!-- Categorías -->
     <div class="categories">
         <div class="category active" data-cat="arroces">Arroces</div>
         <div class="category" data-cat="sopas">Sopas</div>
         <div class="category" data-cat="combos">Combos</div>
     </div>
-
-    <!-- Menú -->
     <div class="menu" id="menu">
-
-        <!-- ====================================== -->
-        <!-- CATEGORÍA ARROCES (ORIGINAL + 2 NUEVOS) -->
-        <!-- ====================================== -->
-        <div class="menu-item" data-cat="arroces"
-             data-img="chaufa.jpg"
-             data-name="Arroz Chaufa"
-             data-price="S/ 18.00"
-             data-desc="Arroz salteado con pollo, huevo y sillao.">
+        <!-- ARROCES -->
+        <div class="menu-item" data-cat="arroces" data-img="chaufa.jpg" data-name="Arroz Chaufa" data-price="S/ 18.00" data-desc="Arroz salteado con pollo, huevo y sillao.">
             <span class="item-name">Arroz Chaufa</span>
             <span class="dots"></span>
             <span class="item-price">S/ 18.00</span>
         </div>
-
-        <!-- Plato nuevo 1 de Arroces -->
-        <div class="menu-item" data-cat="arroces"
-             data-img="arroz-pollo.jpg"
-             data-name="Arroz con Pollo"
-             data-price="S/ 20.00"
-             data-desc="Arroz guisado con trozos de pollo y verduras frescas.">
+        <div class="menu-item" data-cat="arroces" data-img="arroz-pollo.jpg" data-name="Arroz con Pollo" data-price="S/ 20.00" data-desc="Arroz guisado con trozos de pollo y verduras frescas.">
             <span class="item-name">Arroz con Pollo</span>
             <span class="dots"></span>
             <span class="item-price">S/ 20.00</span>
         </div>
-
-        <!-- Plato nuevo 2 de Arroces -->
-        <div class="menu-item" data-cat="arroces"
-             data-img="arroz-mariscos.jpg"
-             data-name="Arroz con Mariscos"
-             data-price="S/ 28.00"
-             data-desc="Arroz salteado con camarones, calamares y mejillones.">
-            <span class="item-name">Arroz con Mariscos</span>
-            <span class="dots"></span>
-            <span class="item-price">S/ 28.00</span>
-        </div>
-
-
-        <!-- ====================================== -->
-        <!-- CATEGORÍA COMBOS (ORIGINAL + 2 NUEVOS) -->
-        <!-- ====================================== -->
-        <div class="menu-item" data-cat="combos"
-             data-img=""
-             data-name="Combinado de Pollo"
-             data-price="S/ 22.00"
-             data-desc="Chaufa más tallarín saltado con pollo.">
-            <span class="item-name">Combinado de Pollo</span>
-            <span class="dots"></span>
-            <span class="item-price">S/ 22.00</span>
-        </div>
-
-        <!-- Plato nuevo 1 de Combos -->
-        <div class="menu-item" data-cat="combos"
-             data-img="combo-familiar.jpg"
-             data-name="Combo Familiar"
-             data-price="S/ 45.00"
-             data-desc="Chaufa grande + tallarines + 2 bebidas medianas.">
-            <span class="item-name">Combo Familiar</span>
-            <span class="dots"></span>
-            <span class="item-price">S/ 45.00</span>
-        </div>
-
-        <!-- Plato nuevo 2 de Combos -->
-        <div class="menu-item" data-cat="combos"
-             data-img="combo-vegano.jpg"
-             data-name="Combo Vegano"
-             data-price="S/ 19.00"
-             data-desc="Arroz vegano + sopa de legumbres + jugo natural.">
-            <span class="item-name">Combo Vegano</span>
-            <span class="dots"></span>
-            <span class="item-price">S/ 19.00</span>
-        </div>
-
-
-        <!-- ====================================== -->
-        <!-- CATEGORÍA SOPAS (ORIGINAL + 2 NUEVOS) -->
-        <!-- ====================================== -->
-        <div class="menu-item" data-cat="sopas"
-             data-img="sopa-wantan.jpg"
-             data-name="Sopa Wantán"
-             data-price="S/ 15.00"
-             data-desc="Caldo tradicional con wantanes y verduras.">
+        <!-- SOPAS -->
+        <div class="menu-item" data-cat="sopas" data-img="sopa-wantan.jpg" data-name="Sopa Wantán" data-price="S/ 15.00" data-desc="Caldo tradicional con wantanes y verduras.">
             <span class="item-name">Sopa Wantán</span>
             <span class="dots"></span>
             <span class="item-price">S/ 15.00</span>
         </div>
-
-        <!-- Plato nuevo 1 de Sopas -->
-        <div class="menu-item" data-cat="sopas"
-             data-img="sopa-fideos.jpg"
-             data-name="Sopa de Fideos"
-             data-price="S/ 14.00"
-             data-desc="Caldo de pollo con fideos finos y trozos de carne.">
+        <div class="menu-item" data-cat="sopas" data-img="sopa-fideos.jpg" data-name="Sopa de Fideos" data-price="S/ 14.00" data-desc="Caldo de pollo con fideos finos y trozos de carne.">
             <span class="item-name">Sopa de Fideos</span>
             <span class="dots"></span>
             <span class="item-price">S/ 14.00</span>
         </div>
-
-        <!-- Plato nuevo 2 de Sopas -->
-        <div class="menu-item" data-cat="sopas"
-             data-img="sopa-tomyam.jpg"
-             data-name="Sopa Tom Yam"
-             data-price="S/ 22.00"
-             data-desc="Sopa tailandesa picante con camarones y cilantro.">
-            <span class="item-name">Sopa Tom Yam</span>
+        <!-- COMBOS -->
+        <div class="menu-item" data-cat="combos" data-img="" data-name="Combinado de Pollo" data-price="S/ 22.00" data-desc="Chaufa más tallarín saltado con pollo.">
+            <span class="item-name">Combinado de Pollo</span>
             <span class="dots"></span>
             <span class="item-price">S/ 22.00</span>
         </div>
-
+        <div class="menu-item" data-cat="combos" data-img="combo-familiar.jpg" data-name="Combo Familiar" data-price="S/ 45.00" data-desc="Chaufa grande + tallarines + 2 bebidas medianas.">
+            <span class="item-name">Combo Familiar</span>
+            <span class="dots"></span>
+            <span class="item-price">S/ 45.00</span>
+        </div>
     </div>
-
-    <!-- Preview -->
     <div class="preview" id="preview">
         <img id="img">
         <h2 id="name"></h2>
@@ -288,56 +180,60 @@ body {
         <p id="desc"></p>
         <button class="back-btn" onclick="volver()">⬅ Volver al menú</button>
     </div>
-
 </div>
-
 <script>
 const items = document.querySelectorAll('.menu-item');
 const preview = document.getElementById('preview');
 const menu = document.getElementById('menu');
 const img = document.getElementById('img');
 
-/* Mostrar plato */
 items.forEach(item => {
     item.onclick = () => {
         const imgSrc = item.dataset.img;
-
         if (imgSrc) {
             img.src = imgSrc;
             img.style.display = "block";
         } else {
             img.style.display = "none";
         }
-
         document.getElementById('name').textContent = item.dataset.name;
         document.getElementById('price').textContent = item.dataset.price;
         document.getElementById('desc').textContent = item.dataset.desc;
-
         menu.style.display = "none";
         preview.classList.add('show');
     }
 });
 
-/* Volver */
 function volver() {
     preview.classList.remove('show');
     menu.style.display = "grid";
 }
 
-/* Filtro categorías */
-document.querySelectorAll('.category').forEach(cat => {
-    cat.onclick = () => {
-        document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
-        cat.classList.add('active');
-
-        const tipo = cat.dataset.cat;
-        items.forEach(item => {
-            item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
+// CAMBIO 2: Filtro de categorías completamente funcional
+document.querySelectorAll('.category').forEach(categoria => {
+    categoria.addEventListener('click', function() {
+        // Quitar clase active de todas
+        document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+        // Agregar active a la seleccionada
+        this.classList.add('active');
+        
+        const tipoCategoria = this.dataset.cat;
+        
+        // Mostrar solo los platos de la categoría seleccionada
+        items.forEach(plato => {
+            if(plato.dataset.cat === tipoCategoria) {
+                plato.style.display = 'flex';
+            } else {
+                plato.style.display = 'none';
+            }
         });
-    }
+        
+        // Ocultar preview si está abierto
+        preview.classList.remove('show');
+        menu.style.display = 'grid';
+    });
 });
 </script>
-
 </body>
 </html>
 
