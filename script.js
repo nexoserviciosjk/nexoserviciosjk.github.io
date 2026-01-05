@@ -4,82 +4,82 @@ const contentDiv = document.getElementById("content");
 /* ===== DATOS COMPLETOS ===== */
 const data = {
   "Carnes": [
-    { nombre: "Carne de Res Saltada en Salsa de Ostión o Tausí", precio: "S/48", img: "img/carnes/carne-ostion.jpg" },
-    { nombre: "Carne de Res con Frijolito Chino", precio: "S/48", img: "img/carnes/carne-frijol.jpg" },
-    { nombre: "Carne de Res con Ostión a la Plancha", precio: "S/53", img: "img/carnes/carne-ostion-plancha.jpg" },
-    { nombre: "Carne de Res con Tausí a la Plancha", precio: "S/53", img: "img/carnes/carne-tausi.jpg" }
+    { nombre: "Carne de Res Saltada en Salsa de Ostión o Tausí", precio: "S/48", img: "carne-ostion.jpg" },
+    { nombre: "Carne de Res con Frijolito Chino", precio: "S/48", img: "carne-frijol.jpg" },
+    { nombre: "Carne de Res con Ostión a la Plancha", precio: "S/53", img: "carne-ostion-plancha.jpg" },
+    { nombre: "Carne de Res con Tausí a la Plancha", precio: "S/53", img: "carne-tausi.jpg" }
   ],
   "Del Mar": [
-    { nombre: "Pescado San Joy Lao", precio: "S/62", img: "img/delmar/pescado-sjl.jpg" },
-    { nombre: "Filete de Pescado al Vapor", precio: "S/65", img: "img/delmar/filete-vapor.jpg" },
-    { nombre: "Pescado con Langostino en salsa de Ostión o Tausí", precio: "S/55", img: "img/delmar/pescado-langostino.jpg" },
-    { nombre: "Pescado al ajo", precio: "S/55", img: "img/delmar/pescado-ajo.jpg" },
-    { nombre: "Pescado con tamarindo", precio: "S/55", img: "img/delmar/pescado-tamarindo.jpg" },
-    { nombre: "Pescado en Salsa de Ostión", precio: "S/55", img: "img/delmar/pescado-ostion.jpg" },
-    { nombre: "Pescado con Tausí a la Plancha", precio: "S/59", img: "img/delmar/pescado-tausi.jpg" },
-    { nombre: "Pescado en Salsa de Ostión a la Plancha", precio: "S/59", img: "img/delmar/pescado-ostion-plancha.jpg" },
-    { nombre: "Langostinos Picantes", precio: "S/50", img: "img/delmar/langostinos-picante.jpg" },
-    { nombre: "Langostinos al Ajo", precio: "S/50", img: "img/delmar/langostinos-ajo.jpg" },
-    { nombre: "Langostinos Arrebolzados", precio: "S/50", img: "img/delmar/langostinos-arrebol.jpg" },
-    { nombre: "Langostinos en Salsa de Ostión o Tausí", precio: "S/50", img: "img/delmar/langostinos-ostion.jpg" },
-    { nombre: "Langostinos en Salsa de Tamarindo", precio: "S/50", img: "img/delmar/langostinos-tamarindo.jpg" },
-    { nombre: "Langostinos en Nido de Paloma", precio: "S/53", img: "img/delmar/langostinos-nido.jpg" },
-    { nombre: "Langostinos a la Plancha", precio: "S/57", img: "img/delmar/langostinos-plancha.jpg" },
-    { nombre: "Rueda de Langostinos", precio: "S/135", img: "img/delmar/rueda-langostinos.jpg" },
-    { nombre: "Chicharrón de Pescado", precio: "S/50", img: "img/delmar/chicharron-pescado.jpg" }
+    { nombre: "Pescado San Joy Lao", precio: "S/62", img: "pescado-sjl.jpg" },
+    { nombre: "Filete de Pescado al Vapor", precio: "S/65", img: "filete-vapor.jpg" },
+    { nombre: "Pescado con Langostino en salsa de Ostión o Tausí", precio: "S/55", img: "pescado-langostino.jpg" },
+    { nombre: "Pescado al ajo", precio: "S/55", img: "pescado-ajo.jpg" },
+    { nombre: "Pescado con tamarindo", precio: "S/55", img: "pescado-tamarindo.jpg" },
+    { nombre: "Pescado en Salsa de Ostión", precio: "S/55", img: "pescado-ostion.jpg" },
+    { nombre: "Pescado con Tausí a la Plancha", precio: "S/59", img: "pescado-tausi.jpg" },
+    { nombre: "Pescado en Salsa de Ostión a la Plancha", precio: "S/59", img: "pescado-ostion-plancha.jpg" },
+    { nombre: "Langostinos Picantes", precio: "S/50", img: "langostinos-picante.jpg" },
+    { nombre: "Langostinos al Ajo", precio: "S/50", img: "langostinos-ajo.jpg" },
+    { nombre: "Langostinos Arrebolzados", precio: "S/50", img: "langostinos-arrebol.jpg" },
+    { nombre: "Langostinos en Salsa de Ostión o Tausí", precio: "S/50", img: "langostinos-ostion.jpg" },
+    { nombre: "Langostinos en Salsa de Tamarindo", precio: "S/50", img: "langostinos-tamarindo.jpg" },
+    { nombre: "Langostinos en Nido de Paloma", precio: "S/53", img: "langostinos-nido.jpg" },
+    { nombre: "Langostinos a la Plancha", precio: "S/57", img: "langostinos-plancha.jpg" },
+    { nombre: "Rueda de Langostinos", precio: "S/135", img: "rueda-langostinos.jpg" },
+    { nombre: "Chicharrón de Pescado", precio: "S/50", img: "chicharron-pescado.jpg" }
   ],
   "Arroz": [
-    { nombre: "Chaufa Taypá Personal", precio: "S/37", img: "img/arroz/chaufa-taypa-personal.jpg" },
-    { nombre: "Chaufa Taypá Fuente", precio: "S/72", img: "img/arroz/chaufa-taypa-fuente.jpg" },
-    { nombre: "Chaufa Especial Personal", precio: "S/25", img: "img/arroz/chaufa-especial-personal.jpg" },
-    { nombre: "Chaufa Especial Fuente", precio: "S/48", img: "img/arroz/chaufa-especial-fuente.jpg" }
+    { nombre: "Chaufa Taypá Personal", precio: "S/37", img: "chaufa-taypa-personal.jpg" },
+    { nombre: "Chaufa Taypá Fuente", precio: "S/72", img: "chaufa-taypa-fuente.jpg" },
+    { nombre: "Chaufa Especial Personal", precio: "S/25", img: "chaufa-especial-personal.jpg" },
+    { nombre: "Chaufa Especial Fuente", precio: "S/48", img: "chaufa-especial-fuente.jpg" }
   ],
   "Tallarines": [
-    { nombre: "Tallarín Taypá", precio: "S/50", img: "img/tallarines/taypa.jpg" },
-    { nombre: "Tallarín Sam Sí", precio: "S/43", img: "img/tallarines/sam-si.jpg" },
-    { nombre: "Tallarín Saltado de Pollo", precio: "S/37", img: "img/tallarines/saltado-pollo.jpg" }
+    { nombre: "Tallarín Taypá", precio: "S/50", img: "taypa.jpg" },
+    { nombre: "Tallarín Sam Sí", precio: "S/43", img: "sam-si.jpg" },
+    { nombre: "Tallarín Saltado de Pollo", precio: "S/37", img: "saltado-pollo.jpg" }
   ],
   "Tortillas": [
-    { nombre: "Tortilla de Pollo", precio: "S/34", img: "img/tortillas/pollo.jpg" },
-    { nombre: "Tortilla de Chancho", precio: "S/34", img: "img/tortillas/chancho.jpg" },
-    { nombre: "Tortilla de Pato", precio: "S/38", img: "img/tortillas/pato.jpg" },
-    { nombre: "Tortilla de Langostinos", precio: "S/40", img: "img/tortillas/langostinos.jpg" }
+    { nombre: "Tortilla de Pollo", precio: "S/34", img: "pollo.jpg" },
+    { nombre: "Tortilla de Chancho", precio: "S/34", img: "chancho.jpg" },
+    { nombre: "Tortilla de Pato", precio: "S/38", img: "pato.jpg" },
+    { nombre: "Tortilla de Langostinos", precio: "S/40", img: "langostinos.jpg" }
   ],
   "Vegetarianos": [
-    { nombre: "Tallarín Saltado con Verduras", precio: "S/30", img: "img/vegetarianos/tallarines.jpg" },
-    { nombre: "Sahofan o Maifán o Fansí con Verduras", precio: "S/35", img: "img/vegetarianos/sahofan.jpg" },
-    { nombre: "Frijolito Saltado", precio: "S/26", img: "img/vegetarianos/frijolito.jpg" }
+    { nombre: "Tallarín Saltado con Verduras", precio: "S/30", img: "tallarines.jpg" },
+    { nombre: "Sahofan o Maifán o Fansí con Verduras", precio: "S/35", img: "sahofan.jpg" },
+    { nombre: "Frijolito Saltado", precio: "S/26", img: "frijolito.jpg" }
   ],
   "Bebidas": [
-    { nombre: "Chicha 1 L", precio: "S/18", img: "img/bebidas/chicha.jpg" },
-    { nombre: "Maracuyá 1 L", precio: "S/18", img: "img/bebidas/maracuya.jpg" },
-    { nombre: "Limonada 1 L", precio: "S/18", img: "img/bebidas/limonada.jpg" },
-    { nombre: "Inca Kola Personal", precio: "S/6", img: "img/bebidas/inca.jpg" }
+    { nombre: "Chicha 1 L", precio: "S/18", img: "chicha.jpg" },
+    { nombre: "Maracuyá 1 L", precio: "S/18", img: "maracuya.jpg" },
+    { nombre: "Limonada 1 L", precio: "S/18", img: "limonada.jpg" },
+    { nombre: "Inca Kola Personal", precio: "S/6", img: "inca.jpg" }
   ],
   "Dim Sum": [
-    { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "img/dimsum/rueda-3.jpg" },
-    { nombre: "Rueda de Bocaditos x 6", precio: "S/80", img: "img/dimsum/rueda-6.jpg" },
-    { nombre: "Siu Kao Picante x 6", precio: "S/19", img: "img/dimsum/siu-kao.jpg" }
+    { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "rueda-3.jpg" },
+    { nombre: "Rueda de Bocaditos x 6", precio: "S/80", img: "rueda-6.jpg" },
+    { nombre: "Siu Kao Picante x 6", precio: "S/19", img: "siu-kao.jpg" }
   ],
   "Sopas": [
-    { nombre: "Wantán Personal", precio: "S/19", img: "img/sopas/wantan-personal.jpg" }
+    { nombre: "Wantán Personal", precio: "S/19", img: "wantan-personal.jpg" }
   ],
   "Pollo": [
-    { nombre: "Kay Ten", precio: "S/43", img: "img/pollo/kay-ten.jpg" },
-    { nombre: "Cru Kay", precio: "S/43", img: "img/pollo/cru-kay.jpg" }
+    { nombre: "Kay Ten", precio: "S/43", img: "kay-ten.jpg" },
+    { nombre: "Cru Kay", precio: "S/43", img: "cru-kay.jpg" }
   ],
   "Pato": [
-    { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "img/pato/pato-frijol.jpg" }
+    { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "pato-frijol.jpg" }
   ],
   "Chanchito": [
-    { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí", precio: "S/45", img: "img/chanchito/chicharron.jpg" }
+    { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí", precio: "S/45", img: "chicharron.jpg" }
   ],
   "Banquetes": [
-    { nombre: "Banquete 2 Personas", precio: "S/110", img: "img/banquetes/2p.jpg" },
-    { nombre: "Banquete 4 Personas", precio: "S/180", img: "img/banquetes/4p.jpg" },
-    { nombre: "Banquete de la Abundancia (6p)", precio: "S/300", img: "img/banquetes/6p.jpg" },
-    { nombre: "Banquete de la Fortuna (8p)", precio: "S/390", img: "img/banquetes/8p.jpg" },
-    { nombre: "Banquete de la Serpiente (10p)", precio: "S/495", img: "img/banquetes/10p.jpg" }
+    { nombre: "Banquete 2 Personas", precio: "S/110", img: "2p.jpg" },
+    { nombre: "Banquete 4 Personas", precio: "S/180", img: "4p.jpg" },
+    { nombre: "Banquete de la Abundancia (6p)", precio: "S/300", img: "6p.jpg" },
+    { nombre: "Banquete de la Fortuna (8p)", precio: "S/390", img: "8p.jpg" },
+    { nombre: "Banquete de la Serpiente (10p)", precio: "S/495", img: "10p.jpg" }
   ]
 };
 
@@ -114,3 +114,4 @@ function showDetail(item, section) {
     </div>
   `;
 }
+
