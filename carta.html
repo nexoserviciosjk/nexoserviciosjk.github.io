@@ -395,17 +395,23 @@ function volver() {
     menu.style.display = "grid";
 }
 
-/* Filtro categorías completo */
-function filtrarCategorias(tipo) {
-    items.forEach(item => {
-        item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
-    });
-}
-
-// Filtrar al cargar la página
-filtrarCategorias('arroces');
-
-// Filtrar al hacer clic
+/* Filtro categorías COMPLETO Y FUNCIONAL */
 document.querySelectorAll('.category').forEach(cat => {
-    cat
-    
+    cat.onclick = () => {
+        // Quitar clase active de todas las categorías
+        document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+        // Agregar clase active a la categoría seleccionada
+        cat.classList.add('active');
+        
+        // Obtener el tipo de categoría seleccionada
+        const tipo = cat.dataset.cat;
+        
+        // Mostrar solo los platos de la categoría seleccionada
+        items.forEach(item => {
+            item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
+        });
+        
+        // Ocultar preview si está abierto
+        preview.classList.remove('show');
+        menu.style.display = "grid";
+        
