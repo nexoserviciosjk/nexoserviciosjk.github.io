@@ -20,29 +20,33 @@
         --accent: #4ade80;
     }
 }
+* {
+    /* Ajuste global para que nada se desborde */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
 }
-/* HEADER AJUSTADO A ANCHO COMPLETO */
+/* HEADER A PANTALLA COMPLETA */
 .header {
     text-align: center;
     padding: 50px 20px;
     background: #000;
     color: #fff;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
+    width: 100vw; /* Ancho total de la pantalla */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .container {
-    max-width: 900px;
+    max-width: 700px; /* Ancho ideal para celulares */
     margin: 40px auto;
     padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
 }
 .categories {
     display: flex;
@@ -50,7 +54,6 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    width: 100%;
 }
 .category {
     padding: 10px 18px;
@@ -66,14 +69,11 @@ body {
     background: var(--accent);
     color: #000;
 }
-/* MENÚ CENTRADO Y CON FILTRO FUNCIONAL */
+/* MENÚ EN 2 COLUMNAS, CENTRADO */
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    width: 100%;
-    max-width: 700px; /* Ancho ajustado para centrar mejor */
-    margin: 0 auto;
 }
 .menu-item {
     background: var(--card);
@@ -84,7 +84,7 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 .menu-item:hover {
     transform: translateY(-4px);
@@ -104,23 +104,15 @@ body {
 }
 .dots {
     flex: 1;
-    border-bottom: 1px dotted rgba(0,0,0,0.25);
+    border-bottom: 1px dotted rgba(255,255,255,0.25);
     transform: translateY(-2px);
     margin: 0 5px;
-    min-width: 20px;
-}
-@media (prefers-color-scheme: dark) {
-    .dots {
-        border-bottom: 1px dotted rgba(255,255,255,0.25);
-    }
+    min-width: 15px;
 }
 .preview {
     margin-top: 40px;
     text-align: center;
     display: none;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .preview.show {
     display: block;
@@ -233,35 +225,35 @@ function volver() {
     menu.style.display = "grid";
 }
 
-// FILTRO DE CATEGORÍAS CORREGIDO Y FUNCIONAL
-function filtrarPorCategoria(tipo) {
-    items.forEach(plato => {
-        if(plato.dataset.cat === tipo) {
-            plato.style.display = 'flex';
-        } else {
-            plato.style.display = 'none';
-        }
-    });
-}
+// === FILTRO COMPLETAMENTE REPARADO ===
+// Ocultar todos los platos primero
+items.forEach(plato => plato.style.display = 'none');
 
-// Filtrar cuando carga la página (solo arroces)
-filtrarPorCategoria('arroces');
+// Mostrar solo los de la categoría activa inicial (ARROCES)
+document.querySelectorAll('.menu-item[data-cat="arroces"]').forEach(plato => {
+    plato.style.display = 'flex';
+});
 
-// Filtrar al hacer clic en las categorías
+// Acción al hacer clic en las categorías
 document.querySelectorAll('.category').forEach(categoria => {
     categoria.addEventListener('click', function() {
-        // Quitar active de todas
+        // Quitar clase active de todas
         document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
         // Agregar active a la seleccionada
         this.classList.add('active');
         
-        // Filtrar los platos
-        const tipoCategoria = this.dataset.cat;
-        filtrarPorCategoria(tipoCategoria);
+        // Ocultar TODOS los platos
+        items.forEach(plato => plato.style.display = 'none');
         
-        // Ocultar preview si está abierto
+        // Mostrar solo los de la categoría seleccionada
+        const tipo = this.dataset.cat;
+        document.querySelectorAll(`.menu-item[data-cat="${tipo}"]`).forEach(plato => {
+            plato.style.display = 'flex';
+        });
+        
+        // Ocultar preview
         preview.classList.remove('show');
-        menu.style.display = 'grid';
+        menu.style.display = "grid";
     });
 });
 </script>
