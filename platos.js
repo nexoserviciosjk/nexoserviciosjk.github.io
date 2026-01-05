@@ -122,15 +122,34 @@ function showList(section) {
 function showDetail(item, section) {
   sectionsDiv.classList.add("hidden");
 
-  // Imagen opcional
-  let imagenHTML = item.img ? `<img src="${item.img}" alt="${item.nombre}">` : '';
+  // Creamos un contenedor detalle
+  contentDiv.innerHTML = `<div class="plato-detalle"></div>`;
+  const detalleDiv = contentDiv.querySelector('.plato-detalle');
 
-  contentDiv.innerHTML = `
-    <div class="plato-detalle">
+  // Imagen opcional: solo se muestra si existe físicamente
+  if (item.img) {
+    const imgTest = new Image();
+    imgTest.src = item.img;
+    imgTest.onload = () => {
+      detalleDiv.innerHTML = `
+        <p>${item.descripcion}</p>
+        <img src="${item.img}" alt="${item.nombre}">
+        <br>
+        <button class="btn-back" onclick="showList('${section}')">⬅ Regresar</button>
+      `;
+    }
+    imgTest.onerror = () => {
+      detalleDiv.innerHTML = `
+        <p>${item.descripcion}</p>
+        <br>
+        <button class="btn-back" onclick="showList('${section}')">⬅ Regresar</button>
+      `;
+    }
+  } else {
+    detalleDiv.innerHTML = `
       <p>${item.descripcion}</p>
-      ${imagenHTML}
       <br>
       <button class="btn-back" onclick="showList('${section}')">⬅ Regresar</button>
-    </div>
-  `;
+    `;
+  }
 }
