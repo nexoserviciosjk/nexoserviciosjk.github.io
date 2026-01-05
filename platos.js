@@ -32,7 +32,22 @@ const data = {
     { nombre: "Chaufa Taypá Personal", precio: "S/37", img: "chaufa-taypa-personal.jpg" },
     { nombre: "Chaufa Taypá Fuente", precio: "S/72", img: "chaufa-taypa-fuente.jpg" },
     { nombre: "Chaufa Especial Personal", precio: "S/25", img: "chaufa-especial-personal.jpg" },
-    { nombre: "Chaufa Especial Fuente", precio: "S/48", img: "chaufa-especial-fuente.jpg" }
+    { nombre: "Chaufa Especial Fuente", precio: "S/48", img: "chaufa-especial-fuente.jpg" },
+    { nombre: "Chaufa de Pollo Personal", precio: "S/22", img: "chaufa-de-pollo-personal.jpg" },
+    { nombre: "Chaufa de Pollo Fuente", precio: "S/42", img: "chaufa-de-pollo-fuente.jpg" },
+    { nombre: "Chaufa de Chancho Personal", precio: "S/22", img: "chaufa-de-chancho-personal.jpg" },
+    { nombre: "Chaufa de Chancho Fuente", precio: "S/42", img: "chaufa-de-chancho-fuente.jpg" },
+    { nombre: "Chaufa de Pollo y Chancho Personal", precio: "S/22", img: "chaufa-de-pollo-y-chancho-personal.jpg" },
+    { nombre: "Chaufa de Pollo y Chancho Fuente", precio: "S/42", img: "chaufa-de-pollo-y-chancho-fuente.jpg" },
+    { nombre: "Chaufa de Res y Cilantro Personal", precio: "S/26", img: "chaufa-de-res-y-cilantro-personal.jpg" },
+    { nombre: "Chaufa de Res y Cilantro Fuente", precio: "S/50", img: "chaufa-de-res-y-cilantro-fuente.jpg" },
+    { nombre: "Chaufa de Pato Personal", precio: "S/27", img: "chaufa-de-pato-personal.jpg" },
+    { nombre: "Chaufa de Pato Fuente", precio: "S/52", img: "chaufa-de-pato-fuente.jpg" },
+    { nombre: "Chaufa de Cuy Personal", precio: "S/30", img: "chaufa-de-cuy-personal.jpg" },
+    { nombre: "Chaufa de Cuy Fuente", precio: "S/60", img: "chaufa-de-cuy-fuente.jpg" },
+    { nombre: "Chaufa de Langostinos Personal", precio: "S/30", img: "chaufa-de-langostinos-personal.jpg" },
+    { nombre: "Chaufa de Langostinos Fuente", precio: "S/57", img: "chaufa-de-langostinos-fuente.jpg" },
+    { nombre: "Arroz Blanco Porción", precio: "S/7", img: "arroz-blanco-porcion.jpg" }
   ],
   "Tallarines": [
     { nombre: "Tallarín Taypá", precio: "S/50", img: "taypa.jpg" },
