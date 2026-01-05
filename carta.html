@@ -27,6 +27,7 @@ body {
     color: var(--text);
     overflow-x: hidden;
 }
+/* HEADER AJUSTADO A ANCHO COMPLETO */
 .header {
     text-align: center;
     padding: 50px 20px;
@@ -34,6 +35,7 @@ body {
     color: #fff;
     width: 100%;
     box-sizing: border-box;
+    margin: 0;
 }
 .container {
     max-width: 900px;
@@ -64,13 +66,13 @@ body {
     background: var(--accent);
     color: #000;
 }
-/* Menú en 2 columnas fijas */
+/* MENÚ CENTRADO Y CON FILTRO FUNCIONAL */
 .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px; /* Ancho ajustado para centrar mejor */
     margin: 0 auto;
 }
 .menu-item {
@@ -83,7 +85,6 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* QUITE EL AJUSTE QUE RECORTA EL TEXTO */
 }
 .menu-item:hover {
     transform: translateY(-4px);
@@ -92,7 +93,6 @@ body {
 .item-name {
     font-weight: 600;
     flex: 1;
-    /* PERMITIR QUE EL TEXTO SE DIVIDA EN VARIAS LÍNEAS SI ES NECESARIO */
     white-space: normal;
     word-wrap: break-word;
 }
@@ -118,7 +118,7 @@ body {
     margin-top: 40px;
     text-align: center;
     display: none;
-    max-width: 800px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -209,6 +209,7 @@ const preview = document.getElementById('preview');
 const menu = document.getElementById('menu');
 const img = document.getElementById('img');
 
+// Mostrar detalle del plato
 items.forEach(item => {
     item.onclick = () => {
         const imgSrc = item.dataset.img;
@@ -226,27 +227,39 @@ items.forEach(item => {
     }
 });
 
+// Volver al menú
 function volver() {
     preview.classList.remove('show');
     menu.style.display = "grid";
 }
 
-// Filtro de categorías completamente funcional
+// FILTRO DE CATEGORÍAS CORREGIDO Y FUNCIONAL
+function filtrarPorCategoria(tipo) {
+    items.forEach(plato => {
+        if(plato.dataset.cat === tipo) {
+            plato.style.display = 'flex';
+        } else {
+            plato.style.display = 'none';
+        }
+    });
+}
+
+// Filtrar cuando carga la página (solo arroces)
+filtrarPorCategoria('arroces');
+
+// Filtrar al hacer clic en las categorías
 document.querySelectorAll('.category').forEach(categoria => {
     categoria.addEventListener('click', function() {
+        // Quitar active de todas
         document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+        // Agregar active a la seleccionada
         this.classList.add('active');
         
+        // Filtrar los platos
         const tipoCategoria = this.dataset.cat;
+        filtrarPorCategoria(tipoCategoria);
         
-        items.forEach(plato => {
-            if(plato.dataset.cat === tipoCategoria) {
-                plato.style.display = 'flex';
-            } else {
-                plato.style.display = 'none';
-            }
-        });
-        
+        // Ocultar preview si está abierto
         preview.classList.remove('show');
         menu.style.display = 'grid';
     });
