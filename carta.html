@@ -25,7 +25,6 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    /* Ajuste: Evitar desbordamiento */
     overflow-x: hidden;
 }
 .header {
@@ -33,7 +32,6 @@ body {
     padding: 50px 20px;
     background: #000;
     color: #fff;
-    /* Ajuste: Ancho completo y centrado */
     width: 100%;
     box-sizing: border-box;
 }
@@ -41,7 +39,6 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    /* Ajuste: Asegurar que no se desborde */
     width: 100%;
     box-sizing: border-box;
 }
@@ -51,7 +48,6 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    /* Ajuste: Centrado total */
     width: 100%;
 }
 .category {
@@ -61,7 +57,6 @@ body {
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    /* Ajuste: Tamaño uniforme */
     min-width: 80px;
     text-align: center;
 }
@@ -74,10 +69,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    /* Ajuste: Centrado y ancho correcto */
     width: 100%;
-    max-width: 800px; /* Limitar ancho para que no se extienda demasiado */
-    margin: 0 auto; /* Centrar el menú */
+    max-width: 800px;
+    margin: 0 auto;
 }
 .menu-item {
     background: var(--card);
@@ -89,10 +83,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Ajuste: No desbordar texto */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* QUITE EL AJUSTE QUE RECORTA EL TEXTO */
 }
 .menu-item:hover {
     transform: translateY(-4px);
@@ -100,23 +91,23 @@ body {
 }
 .item-name {
     font-weight: 600;
-    /* Ajuste: Permitir que el nombre ocupe espacio */
     flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* PERMITIR QUE EL TEXTO SE DIVIDA EN VARIAS LÍNEAS SI ES NECESARIO */
+    white-space: normal;
+    word-wrap: break-word;
 }
 .item-price {
     font-weight: 600;
     color: var(--accent);
-    /* Ajuste: Mantener precio visible */
     flex-shrink: 0;
+    white-space: nowrap;
 }
 .dots {
     flex: 1;
     border-bottom: 1px dotted rgba(0,0,0,0.25);
     transform: translateY(-2px);
-    /* Ajuste: Alinear puntos correctamente */
     margin: 0 5px;
+    min-width: 20px;
 }
 @media (prefers-color-scheme: dark) {
     .dots {
@@ -127,7 +118,6 @@ body {
     margin-top: 40px;
     text-align: center;
     display: none;
-    /* Ajuste: Centrar preview */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -155,7 +145,6 @@ body {
     background: var(--accent);
     font-weight: 600;
     cursor: pointer;
-    /* Ajuste: Centrar botón */
     display: inline-block;
 }
 </style>
@@ -245,14 +234,11 @@ function volver() {
 // Filtro de categorías completamente funcional
 document.querySelectorAll('.category').forEach(categoria => {
     categoria.addEventListener('click', function() {
-        // Quitar clase active de todas
         document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
-        // Agregar active a la seleccionada
         this.classList.add('active');
         
         const tipoCategoria = this.dataset.cat;
         
-        // Mostrar solo los platos de la categoría seleccionada
         items.forEach(plato => {
             if(plato.dataset.cat === tipoCategoria) {
                 plato.style.display = 'flex';
@@ -261,7 +247,6 @@ document.querySelectorAll('.category').forEach(categoria => {
             }
         });
         
-        // Ocultar preview si está abierto
         preview.classList.remove('show');
         menu.style.display = 'grid';
     });
