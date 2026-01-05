@@ -41,7 +41,7 @@ body {
 .container {
     max-width: 900px;
     margin: 40px auto;
-    padding: 0 15px; /* Reducir padding para más espacio */
+    padding: 0 15px;
 }
 
 /* Categorías */
@@ -69,15 +69,13 @@ body {
     color: #000;
 }
 
-/* Menú - Ajustes para botones uniformes */
+/* Menú - Ajustes de columnas y tamaño */
 .menu {
     display: grid;
-    /* Fijar columnas: 2 en vertical, 3 en horizontal */
-    grid-template-columns: repeat(2, 1fr); /* Siempre 2 columnas en vertical */
-    gap: 10px; /* Reducir espacio entre botones */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en vertical */
+    gap: 10px;
 }
 
-/* Para pantallas horizontales o grandes */
 @media (min-width: 600px) {
     .menu {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas en horizontal */
@@ -86,16 +84,15 @@ body {
 
 .menu-item {
     background: var(--card);
-    padding: 12px 15px; /* Reducir padding interno */
+    padding: 12px 15px;
     border-radius: 14px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-
     display: flex;
     align-items: center;
-    gap: 5px; /* Reducir espacio entre elementos */
-    min-height: 40px; /* Altura mínima uniforme */
+    gap: 5px;
+    min-height: 40px;
 }
 
 .menu-item:hover {
@@ -105,9 +102,9 @@ body {
 
 .item-name {
     font-weight: 600;
-    font-size: 0.9em; /* Tamaño de texto ajustado */
-    white-space: normal; /* Permitir salto de línea si es necesario */
-    flex: 1; /* Ocupar espacio disponible */
+    font-size: 0.9em;
+    white-space: normal;
+    flex: 1;
 }
 
 .item-price {
@@ -115,14 +112,14 @@ body {
     color: var(--accent);
     font-size: 0.9em;
     white-space: nowrap;
-    flex-shrink: 0; /* No reducir tamaño del precio */
+    flex-shrink: 0;
 }
 
 .dots {
-    flex: 0 1 auto; /* No estirar demasiado */
+    flex: 0 1 auto;
     border-bottom: 1px dotted rgba(0,0,0,0.25);
-    margin: 0 5px; /* Espacio pequeño entre nombre y precio */
-    min-width: 10px; /* Mínimo espacio para puntos */
+    margin: 0 5px;
+    min-width: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -187,9 +184,9 @@ body {
     <!-- Menú con 6 platos por categoría -->
     <div class="menu" id="menu">
 
-        <!-- Categoría ARROCES (6 platos) -->
+        <!-- ARROCES -->
         <div class="menu-item" data-cat="arroces"
-             data-img="chaufa.jpg"
+             data-img="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
              data-name="Arroz Chaufa"
              data-price="S/ 18.00"
              data-desc="Arroz salteado con pollo, huevo y sillao.">
@@ -243,7 +240,7 @@ body {
             <span class="item-price">S/ 16.00</span>
         </div>
 
-        <!-- Categoría SOPAS (6 platos) -->
+        <!-- SOPAS -->
         <div class="menu-item" data-cat="sopas"
              data-img=""
              data-name="Sopa Wantán"
@@ -299,7 +296,7 @@ body {
             <span class="item-price">S/ 22.00</span>
         </div>
 
-        <!-- Categoría COMBOS (6 platos) -->
+        <!-- COMBOS -->
         <div class="menu-item" data-cat="combos"
              data-img=""
              data-name="Combinado de Pollo"
@@ -378,18 +375,15 @@ const img = document.getElementById('img');
 items.forEach(item => {
     item.onclick = () => {
         const imgSrc = item.dataset.img;
-
         if (imgSrc) {
             img.src = imgSrc;
             img.style.display = "block";
         } else {
             img.style.display = "none";
         }
-
         document.getElementById('name').textContent = item.dataset.name;
         document.getElementById('price').textContent = item.dataset.price;
         document.getElementById('desc').textContent = item.dataset.desc;
-
         menu.style.display = "none";
         preview.classList.add('show');
     }
@@ -401,8 +395,17 @@ function volver() {
     menu.style.display = "grid";
 }
 
-/* Filtro categorías */
+/* Filtro categorías completo */
 function filtrarCategorias(tipo) {
     items.forEach(item => {
-        item.style.display = (item.dataset.cat === tipo) ? 'flex'
-            
+        item.style.display = (item.dataset.cat === tipo) ? 'flex' : 'none';
+    });
+}
+
+// Filtrar al cargar la página
+filtrarCategorias('arroces');
+
+// Filtrar al hacer clic
+document.querySelectorAll('.category').forEach(cat => {
+    cat
+    
