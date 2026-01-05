@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #2b0000, #120000);
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #8b0000, #4d0000);
+  border-bottom: 3px solid #d4af37;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 0;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+/* BOTONES SECCIONES */
+.menu-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.menu-sections button {
+  background: linear-gradient(145deg, #b00000, #7a0000);
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* LISTA PLATOS */
+.plato-btn {
+  background: #220000;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.plato-precio {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* DETALLE */
+.plato-detalle {
+  text-align: center;
+  padding: 20px;
+}
+
+.plato-detalle img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  border: 2px solid #d4af37;
+}
+
+.btn-back {
+  margin-top: 20px;
+  background: #d4af37;
+  color: #4d0000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
