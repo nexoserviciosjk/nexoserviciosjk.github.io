@@ -47,9 +47,55 @@ const data = {
     { nombre: "Chaufa de Cuy Fuente", precio: "S/60", img: "chaufa-de-cuy-fuente.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Chaufa de Langostinos Personal", precio: "S/30", img: "chaufa-de-langostinos-personal.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Chaufa de Langostinos Fuente", precio: "S/57", img: "chaufa-de-langostinos-fuente.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Arroz Blanco Porción", precio: "S/7", img: "", descripcion: "Carne, arroz, fideos" } // sin imagen
+    { nombre: "Arroz Blanco Porción", precio: "S/7", img: "", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Tallarines": [
+    { nombre: "Tallarín Taypá", precio: "S/50", img: "taypa.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Tallarín Sam Sí", precio: "S/43", img: "sam-si.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Tallarín Saltado de Pollo", precio: "S/37", img: "saltado-pollo.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Tortillas": [
+    { nombre: "Tortilla de Pollo", precio: "S/34", img: "pollo.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Tortilla de Chancho", precio: "S/34", img: "chancho.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Tortilla de Pato", precio: "S/38", img: "pato.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Tortilla de Langostinos", precio: "S/40", img: "langostinos.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Vegetarianos": [
+    { nombre: "Tallarín Saltado con Verduras", precio: "S/30", img: "tallarines.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Sahofan o Maifán o Fansí con Verduras", precio: "S/35", img: "sahofan.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Frijolito Saltado", precio: "S/26", img: "frijolito.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Bebidas": [
+    { nombre: "Chicha 1 L", precio: "S/18", img: "chicha.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Maracuyá 1 L", precio: "S/18", img: "maracuya.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Limonada 1 L", precio: "S/18", img: "limonada.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Inca Kola Personal", precio: "S/6", img: "inca.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Dim Sum": [
+    { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "rueda-3.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Rueda de Bocaditos x 6", precio: "S/80", img: "rueda-6.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Siu Kao Picante x 6", precio: "S/19", img: "siu-kao.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Sopas": [
+    { nombre: "Wantán Personal", precio: "S/19", img: "wantan-personal.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Pollo": [
+    { nombre: "Kay Ten", precio: "S/43", img: "kay-ten.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Cru Kay", precio: "S/43", img: "cru-kay.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Pato": [
+    { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "pato-frijol.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Chanchito": [
+    { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí", precio: "S/45", img: "chicharron.jpg", descripcion: "Carne, arroz, fideos" }
+  ],
+  "Banquetes": [
+    { nombre: "Banquete 2 Personas", precio: "S/110", img: "2p.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Banquete 4 Personas", precio: "S/180", img: "4p.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Banquete de la Abundancia (6p)", precio: "S/300", img: "6p.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Banquete de la Fortuna (8p)", precio: "S/390", img: "8p.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Banquete de la Serpiente (10p)", precio: "S/495", img: "10p.jpg", descripcion: "Carne, arroz, fideos" }
   ]
-  // Puedes agregar las demás secciones siguiendo el mismo patrón
 };
 
 /* ===== CREAR BOTONES DE SECCIÓN ===== */
