@@ -13,42 +13,25 @@ body {
   color: #fff;
 }
 
-/* ===== HEADER CON IMAGEN DE FONDO ===== */
-header.hero {
+/* HEADER */
+header {
   text-align: center;
-  padding: 80px 20px; /* altura del banner */
-  background-image: url('san-joy-lao-logo.jpg'); /* tu imagen como fondo */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 20px;
+  background: linear-gradient(135deg, #8b0000, #4d0000);
   border-bottom: 3px solid #d4af37;
-  position: relative;
 }
-
-/* Mantener el título encima del fondo */
-header.hero h1 {
-  position: relative;
-  font-family: 'Karate', serif;
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+header h1 {
+  font-family: 'Karate', serif; /* SOLO CAMBIO: FUENTE DEL TÍTULO */
   margin: 0;
   color: #d4af37;
   letter-spacing: 2px;
-  font-size: 2.5rem;
-  z-index: 1;
 }
 
-/* Overlay opcional para que el título resalte más */
-header.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* ajusta opacidad si quieres más o menos oscuro */
-  z-index: 0;
-}
-
-/* ===== BOTONES SECCIONES ===== */
+/* BOTONES SECCIONES */
 .menu-sections {
   display: flex;
   flex-wrap: wrap;
@@ -56,6 +39,7 @@ header.hero::before {
   gap: 10px;
   padding: 15px;
 }
+/* Clase para ocultar las secciones cuando se vea un plato */
 .menu-sections.hidden {
   display: none;
 }
@@ -69,7 +53,7 @@ header.hero::before {
   cursor: pointer;
 }
 
-/* ===== LISTA DE PLATOS ===== */
+/* LISTA DE PLATOS */
 .plato-btn {
   background: #220000;
   border: 1px solid #d4af37;
@@ -85,7 +69,7 @@ header.hero::before {
   font-weight: bold;
 }
 
-/* ===== DETALLE PLATO ===== */
+/* DETALLE PLATO */
 .plato-detalle {
   text-align: center;
   padding: 20px;
@@ -104,8 +88,8 @@ header.hero::before {
 }
 .plato-detalle img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-width: 500px; /* Imagen más grande (antes era 320px) */
+  height: auto; /* Mantiene proporciones */
   border-radius: 15px;
   border: 2px solid #d4af37;
 }
@@ -121,7 +105,7 @@ header.hero::before {
   font-size: 1.1rem;
 }
 
-/* ===== BANQUETES ===== */
+/* BANQUETES */
 .banquete-card {
   background: linear-gradient(145deg, #200000, #3b0000);
   border: 2px solid #d4af37;
