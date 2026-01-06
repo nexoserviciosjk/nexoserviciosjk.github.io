@@ -99,7 +99,7 @@ header h1 {
 
 .plato-detalle img {
   width: 100%;
-  max-width: 700px; /* Imagen más grande (antes era 320px) */
+  max-width: 900px; /* Imagen más grande (antes era 320px) */
   height: auto; /* Mantiene proporciones */
   border-radius: 15px;
   border: 2px solid #d4af37;
