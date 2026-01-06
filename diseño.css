@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@font-face {
+  font-family: 'Karate';
+  src: url('Karate.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* ===== GENERAL ===== */
 body {
@@ -20,7 +25,7 @@ header {
   margin-bottom: 10px;
 }
 header h1 {
-  font-family: 'Playfair Display', serif; /* ← SOLO CAMBIO */
+  font-family: 'Karate', serif; /* FUENTE KARATE SOLO EN EL TÍTULO */
   margin: 0;
   color: #d4af37;
   letter-spacing: 2px;
@@ -38,6 +43,7 @@ header h1 {
   display: none;
 }
 .menu-sections button {
+  font-family: 'Karate', serif; /* FUENTE KARATE SOLO EN BOTONES */
   background: linear-gradient(145deg, #b00000, #7a0000);
   color: #d4af37;
   border: 1px solid #d4af37;
@@ -47,7 +53,7 @@ header h1 {
   cursor: pointer;
 }
 
-/* LISTA DE PLATOS */
+/* LISTA DE PLATOS (NO SE TOCA LA FUENTE) */
 .plato-btn {
   background: #220000;
   border: 1px solid #d4af37;
