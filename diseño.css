@@ -17,7 +17,7 @@ body {
 header {
   text-align: center;
   padding: 20px; /* mantiene el padding original */
-  background-image: url('san-joy-lao.jpg'); /* tu imagen de fondo */
+  background-image: url('san-joy-lao-logo.jpg'); /* tu imagen de fondo */
   background-size: cover;          /* ocupa todo el header */
   background-position: center;     /* centrada */
   background-repeat: no-repeat;    /* no se repite */
