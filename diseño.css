@@ -25,7 +25,7 @@ header {
   margin-bottom: 10px;
 }
 header h1 {
-  font-family: 'Karate', serif; /* FUENTE KARATE SOLO EN EL TÍTULO */
+  font-family: 'Karate', serif; /* SOLO CAMBIO: FUENTE DEL TÍTULO */
   margin: 0;
   color: #d4af37;
   letter-spacing: 2px;
@@ -39,11 +39,11 @@ header h1 {
   gap: 10px;
   padding: 15px;
 }
+/* Clase para ocultar las secciones cuando se vea un plato */
 .menu-sections.hidden {
   display: none;
 }
 .menu-sections button {
-  font-family: 'Karate', serif; /* FUENTE KARATE SOLO EN BOTONES */
   background: linear-gradient(145deg, #b00000, #7a0000);
   color: #d4af37;
   border: 1px solid #d4af37;
@@ -53,7 +53,7 @@ header h1 {
   cursor: pointer;
 }
 
-/* LISTA DE PLATOS (NO SE TOCA LA FUENTE) */
+/* LISTA DE PLATOS */
 .plato-btn {
   background: #220000;
   border: 1px solid #d4af37;
@@ -88,8 +88,8 @@ header h1 {
 }
 .plato-detalle img {
   width: 100%;
-  max-width: 500px;
-  height: auto;
+  max-width: 500px; /* Imagen más grande (antes era 320px) */
+  height: auto; /* Mantiene proporciones */
   border-radius: 15px;
   border: 2px solid #d4af37;
 }
