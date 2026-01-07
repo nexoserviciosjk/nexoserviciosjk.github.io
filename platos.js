@@ -167,7 +167,18 @@ const data = {
     { nombre: "1 Pato Asado Cantones con hueso acompañado de Nabo Encurtilo ¡Nuevo!", precio: "S/95", img: "", descripcion: "" }
   ],
   "Chanchito": [
-    { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí", precio: "S/45", img: "chicharron.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí ¡Nuevo!", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Chicharrón Chifero en Salsa Picante ¡Nuevo!", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Chicharrón Kin Tou ¡Nuevo!", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Chancho con Tamarindo", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Chancho al Ajo", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Cha Siu con Nabo", precio: "S/46", img: "", descripcion: "" },
+    { nombre: "Chancho con Verduras", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Chancho Crujiente", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Crujiente con Niño de Paloma", precio: "S/48", img: "", descripcion: "" },
+    { nombre: "Costillas Picantes", precio: "S/48", img: "", descripcion: "" },
+    { nombre: "Costillas con Tín y Niño de Paloma", precio: "S/51", img: "", descripcion: "" },
+    { nombre: "Costillas Picantes a la Plancha", precio: "S/53", img: "", descripcion: "" }
   ],
   "Banquetes": [
     { nombre: "Banquete 2 Personas", precio: "S/110", img: "2p.jpg", descripcion: "Carne, arroz, fideos" },
