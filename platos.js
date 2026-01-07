@@ -108,9 +108,18 @@ const data = {
     { nombre: "Agua de Mesa (Con o Sin Gas)", precio: "S/6", img: "", descripcion: "" }
   ],
   "Dim Sum": [
-    { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "rueda-3.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Rueda de Bocaditos x 6", precio: "S/80", img: "rueda-6.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Siu Kao Picante x 6", precio: "S/19", img: "siu-kao.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Rueda de Bocaditos x 6", precio: "S/80", img: "", descripcion: "" },
+    { nombre: "Siu Kao bañado en Salsa Picante x 6 ¡Nuevo!", precio: "S/19", img: "", descripcion: "" },
+    { nombre: "Siu Mai x 6", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Ja Kao x 6", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Enrolladito Primavera x 6", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Siu Kao Frito x 6", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Siu Kao San Joy Lao x 6 (vapor)", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Wantán x 6", precio: "S/10", img: "", descripcion: "" },
+    { nombre: "Wantán x 12", precio: "S/18", img: "", descripcion: "" },
+    { nombre: "Chicharrón de Pollo", precio: "S/33", img: "", descripcion: "" },
+    { nombre: "Nabo Encurtilo", precio: "S/14", img: "", descripcion: "" }
   ],
   "Sopas": [
     { nombre: "Wantán Personal", precio: "S/19", img: "wantan-personal.jpg", descripcion: "Carne, arroz, fideos" }
