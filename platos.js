@@ -96,10 +96,16 @@ const data = {
     { nombre: "Verduras Salteadas", precio: "S/30", img: "", descripcion: "" }
   ],
   "Bebidas": [
-    { nombre: "Chicha 1 L", precio: "S/18", img: "chicha.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Maracuyá 1 L", precio: "S/18", img: "maracuya.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Limonada 1 L", precio: "S/18", img: "limonada.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Inca Kola Personal", precio: "S/6", img: "inca.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Chicha 1 L", precio: "S/18", img: "", descripcion: "" },
+    { nombre: "Maracuyá 1 L", precio: "S/18", img: "", descripcion: "" },
+    { nombre: "Maracuyá Frozen 1 L", precio: "S/21", img: "", descripcion: "" },
+    { nombre: "Limonada 1 L", precio: "S/18", img: "", descripcion: "" },
+    { nombre: "Limonada Frozen 1 L", precio: "S/21", img: "", descripcion: "" },
+    { nombre: "Inca Kola Personal (Regular o Sin Azúcar)", precio: "S/6", img: "", descripcion: "" },
+    { nombre: "Coca Cola Personal (Regular o Sin Azúcar)", precio: "S/6", img: "", descripcion: "" },
+    { nombre: "Inca Kola 1.5 L (Regular o Sin Azúcar)", precio: "S/12", img: "", descripcion: "" },
+    { nombre: "Coca Cola 1.5 L (Regular o Sin Azúcar)", precio: "S/12", img: "", descripcion: "" },
+    { nombre: "Agua de Mesa (Con o Sin Gas)", precio: "S/6", img: "", descripcion: "" }
   ],
   "Dim Sum": [
     { nombre: "Rueda de Bocaditos x 3", precio: "S/45", img: "rueda-3.jpg", descripcion: "Carne, arroz, fideos" },
