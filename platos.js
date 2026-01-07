@@ -122,11 +122,34 @@ const data = {
     { nombre: "Nabo Encurtilo", precio: "S/14", img: "", descripcion: "" }
   ],
   "Sopas": [
-    { nombre: "Wantán Personal", precio: "S/19", img: "wantan-personal.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Wantán Personal", precio: "S/19", img: "", descripcion: "" },
+    { nombre: "Wantán Sopera Grande", precio: "S/55", img: "", descripcion: "" },
+    { nombre: "Wantán Especial Personal", precio: "S/22", img: "", descripcion: "" },
+    { nombre: "Wantán Especial Sopera Grande", precio: "S/60", img: "", descripcion: "" },
+    { nombre: "Siu Kao San Joy Lao Personal", precio: "S/23", img: "", descripcion: "" },
+    { nombre: "Siu Kao San Joy Lao Sopera", precio: "S/65", img: "", descripcion: "" },
+    { nombre: "Pac Pow Personal", precio: "S/19", img: "", descripcion: "" },
+    { nombre: "Fu Chi Fu Personal", precio: "S/19", img: "", descripcion: "" },
+    { nombre: "Caldo de Pollo con Fansí Personal", precio: "S/17", img: "", descripcion: "" },
+    { nombre: "Sopa de Pato Personal", precio: "S/26", img: "", descripcion: "" },
+    { nombre: "Sopa Sichuan Personal", precio: "S/25", img: "", descripcion: "" }
   ],
   "Pollo": [
-    { nombre: "Kay Ten", precio: "S/43", img: "kay-ten.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Cru Kay", precio: "S/43", img: "cru-kay.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Kay Ten", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Koy Ten", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Chi Jau Kay", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Ti Pa Kay", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "5 Sabores", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo con Frijolito Chino", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo a la Naranja", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo al Limón", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo en Trozos con Salsa de Ostión o Tausí", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo con Verduras", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo Trozado con Piña y Duraznos", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "1/2 Pollo Chei Pei Kay", precio: "S/49", img: "", descripcion: "" },
+    { nombre: "1/2 Pollo Kin Tou", precio: "S/49", img: "", descripcion: "" },
+    { nombre: "Pollo Enrollado con Espárragos", precio: "S/43", img: "", descripcion: "" },
+    { nombre: "Pollo Enrollado con Espárragos a la Plancha", precio: "S/51", img: "", descripcion: "" }
   ],
   "Pato": [
     { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "pato-frijol.jpg", descripcion: "Carne, arroz, fideos" }
