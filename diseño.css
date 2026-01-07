@@ -137,7 +137,10 @@ header h1 {
   font-weight: bold;
 }
 
-/* ===== 🔴 UNICO CAMBIO AGREGADO ===== */
+/* ===== ✅ ÚNICO CAMBIO PARA ORDENAR DESCRIPCIÓN ===== */
 .descripcion {
   white-space: pre-line;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.3rem;
 }
