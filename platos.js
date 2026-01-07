@@ -87,9 +87,13 @@ const data = {
     { nombre: "Tortilla de Langostinos", precio: "S/40", img: "langostinos.jpg", descripcion: "Carne, arroz, fideos" }
   ],
   "Vegetarianos": [
-    { nombre: "Tallarín Saltado con Verduras", precio: "S/30", img: "tallarines.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Sahofan o Maifán o Fansí con Verduras", precio: "S/35", img: "sahofan.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Frijolito Saltado", precio: "S/26", img: "frijolito.jpg", descripcion: "Carne, arroz, fideos" }
+    { nombre: "Tallarín Saltado con Verduras", precio: "S/30", img: "", descripcion: "" },
+    { nombre: "Sahofán o Maifán o Fansí con Verduras", precio: "S/35", img: "", descripcion: "" },
+    { nombre: "Frijolito Saltado", precio: "S/26", img: "", descripcion: "" },
+    { nombre: "Chaufa Vegetariano Personal", precio: "S/26", img: "", descripcion: "" },
+    { nombre: "Chaufa Vegetariano Fuente", precio: "S/50", img: "", descripcion: "" },
+    { nombre: "Tortilla con Verduras", precio: "S/30", img: "", descripcion: "" },
+    { nombre: "Verduras Salteadas", precio: "S/30", img: "", descripcion: "" }
   ],
   "Bebidas": [
     { nombre: "Chicha 1 L", precio: "S/18", img: "chicha.jpg", descripcion: "Carne, arroz, fideos" },
