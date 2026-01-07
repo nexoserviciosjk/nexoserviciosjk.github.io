@@ -181,7 +181,13 @@ const data = {
     { nombre: "Costillas Picantes a la Plancha", precio: "S/53", img: "", descripcion: "" }
   ],
   "Banquetes": [
-    { nombre: "Banquete 2 Personas", precio: "S/110", img: "2p.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Banquete 2 Personas", precio: "S/110", img: "2p.jpg", descripcion: "-1 Chaufa Plato (Pollo o Chancho)
+- 1/2 Docena de Wantán Frito Opciones:
+ - Opción 1: Pollo Enrollado con Espárragos / Pollo Trozado con Piña y Duraznos
+- Opción 2: Pollo Enrollado con Espárragos / Cru Kay
+- Opción 3: Chancho al Ajo / Pollo Ti Pa Kay
+- Opción 4: Tallarín Saltado (Pollo o Chancho) / Kam Lu Wantán
+- Opción 5: Pollo Chi Jau Kay / Cru Yoc" },
     { nombre: "Banquete 4 Personas", precio: "S/180", img: "4p.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Banquete de la Abundancia (6p)", precio: "S/300", img: "6p.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Banquete de la Fortuna (8p)", precio: "S/390", img: "8p.jpg", descripcion: "Carne, arroz, fideos" },
