@@ -151,8 +151,20 @@ const data = {
     { nombre: "Pollo Enrollado con Espárragos", precio: "S/43", img: "", descripcion: "" },
     { nombre: "Pollo Enrollado con Espárragos a la Plancha", precio: "S/51", img: "", descripcion: "" }
   ],
-  "Pato": [
-    { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "pato-frijol.jpg", descripcion: "Carne, arroz, fideos" }
+  "Pato Asado": [
+    { nombre: "Pato con Frijolito Chino", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Pato en Salsa de Ostión o Tausí", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Pato con Piña y Durazno", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Pato con Tamarindo", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Pato Asado al Ajo", precio: "S/45", img: "", descripcion: "" },
+    { nombre: "Pato al Ajo a la Plancha", precio: "S/53", img: "", descripcion: "" },
+    { nombre: "1/2 Pato Kin Tou", precio: "S/65", img: "", descripcion: "" },
+    { nombre: "1/2 Pato Chei Pei Kay", precio: "S/65", img: "", descripcion: "" },
+    { nombre: "1/4 Pato Asado al Estilo Cantones", precio: "S/40", img: "", descripcion: "" },
+    { nombre: "1/2 Pato Asado al Estilo Cantones", precio: "S/55", img: "", descripcion: "" },
+    { nombre: "1 Pato Asado al Estilo Cantones", precio: "S/99", img: "", descripcion: "" },
+    { nombre: "1/2 Pato Asado Cantones con hueso acompañado de Nabo Encurtilo ¡Nuevo!", precio: "S/52", img: "", descripcion: "" },
+    { nombre: "1 Pato Asado Cantones con hueso acompañado de Nabo Encurtilo ¡Nuevo!", precio: "S/95", img: "", descripcion: "" }
   ],
   "Chanchito": [
     { nombre: "Chicharrón Oriental en Salsa Ostión o Tausí", precio: "S/45", img: "chicharron.jpg", descripcion: "Carne, arroz, fideos" }
