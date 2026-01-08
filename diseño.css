@@ -16,12 +16,12 @@ body {
 /* ===== HEADER CON IMAGEN DE FONDO ===== */
 header {
   text-align: center;
-  padding: 20px;
-  background-image: url('san-joy-lao-logo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-bottom: 3px solid #d4af37;
+  padding: 20px; /* mantiene el padding original */
+  background-image: url('san-joy-lao-logo.jpg'); /* tu imagen de fondo */
+  background-size: cover;          /* ocupa todo el header */
+  background-position: center;     /* centrada */
+  background-repeat: no-repeat;    /* no se repite */
+  border-bottom: 3px solid #d4af37; /* mantiene el borde original */
 }
 
 .logo {
@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Karate', serif;
+  font-family: 'Karate', serif; /* tu fuente del título */
   margin: 0;
   color: #d4af37;
   letter-spacing: 2px;
@@ -45,6 +45,7 @@ header h1 {
   padding: 15px;
 }
 
+/* Clase para ocultar las secciones cuando se vea un plato */
 .menu-sections.hidden {
   display: none;
 }
@@ -98,8 +99,8 @@ header h1 {
 
 .plato-detalle img {
   width: 100%;
-  max-width: 1000px;
-  height: auto;
+  max-width: 1000px; /* Imagen más grande (antes era 320px) */
+  height: auto; /* Mantiene proporciones */
   border-radius: 15px;
   border: 2px solid #d4af37;
 }
@@ -135,12 +136,4 @@ header h1 {
 .banquete-card p {
   font-size: 1.3rem;
   font-weight: bold;
-}
-
-/* ===== ✅ ÚNICO CAMBIO PARA ORDENAR DESCRIPCIÓN ===== */
-.descripcion {
-  white-space: pre-line;
-  text-align: left;
-  line-height: 1.6;
-  font-size: 0.62rem;
 }
