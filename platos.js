@@ -20,7 +20,7 @@ const data = {
     { nombre: "Pescado en Salsa de Ostión a la Plancha", precio: "S/59", img: "pescado-ostion-plancha.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Langostinos Picantes", precio: "S/50", img: "langostinos-picante.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Langostinos al Ajo", precio: "S/50", img: "langostinos-ajo.jpg", descripcion: "Carne, arroz, fideos" },
-    { nombre: "Langostinos Arrebolzados", precio: "S/50", img: "langostinos-arrebol.jpg", descripcion: "Carne, arroz, fideos" },
+    { nombre: "Langostinos Arrebozados", precio: "S/50", img: "langostinos-arrebol.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Langostinos en Salsa de Ostión o Tausí", precio: "S/50", img: "langostinos-ostion.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Langostinos en Salsa de Tamarindo", precio: "S/50", img: "langostinos-tamarindo.jpg", descripcion: "Carne, arroz, fideos" },
     { nombre: "Langostinos en Nido de Paloma", precio: "S/53", img: "langostinos-nido.jpg", descripcion: "Carne, arroz, fideos" },
