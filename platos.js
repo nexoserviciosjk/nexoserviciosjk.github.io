@@ -189,7 +189,7 @@ const data = {
 Opciones:
 
 - Opción 1: Pollo Enrollado con Espárragos / Pollo Trozado con Piña y Duraznos
-- Opción 2: Pollo Enrollado con Espárragosagos / Cru Kay
+- Opción 2: Pollo Enrollado con Espárragos / Cru Kay
 - Opción 3: Chancho al Ajo / Pollo Ti Pa Kay
 - Opción 4: Tallarín Saltado (Pollo o Chancho) / Kam Lu Wantán
 - Opción 5: Pollo Chi Jau Kay / Cru Yoc` },
