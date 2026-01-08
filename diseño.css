@@ -95,6 +95,9 @@ header h1 {
   margin: 0 0 20px 0;
   font-size: 0.62rem;
   color: #fff;
+   text-align: left;       /* texto alineado, no centrado */
+  line-height: 1.6;       /* espacio entre líneas */
+  white-space: pre-line;  /* respeta saltos de línea */
 }
 
 .plato-detalle img {
